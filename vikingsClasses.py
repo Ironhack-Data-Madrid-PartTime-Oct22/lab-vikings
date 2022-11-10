@@ -3,7 +3,7 @@
 
 
 class Soldier:
-    pass
+    print("estoesunaprueba")
 
 # Viking
 
