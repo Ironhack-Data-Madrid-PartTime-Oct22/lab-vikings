@@ -11,10 +11,10 @@ In this laboratory you will work with the concept of inheritance in Python.
 You will find the following files in the folder of this laboratory:
 
 - `vikingsClasses.py`
-- `1-testSoldier.py`
-- `2-testVikings.py`
-- `3-testSaxons.py`
-- `4-testWar.py`
+- `1-testsSoldier.py`
+- `2-testsVikings.py`
+- `3-testsSaxons.py`
+- `4-testsWar.py`
 
 You are free to use any of the code editors you have to open these files.
 
@@ -39,7 +39,7 @@ So, let's say you have already created the class for Soldiers.
 3. In your terminal, run the test file for that class
 
 ```bash
-$ python3 1-testSoldier.py --v
+$ python3 1-testsSoldier.py --v
 ```
 
 ### Correct Test
@@ -71,7 +71,7 @@ OK
 When any test is incorrect you will receive the following message in the terminal. It means that you must keep making changes in the `vikingsClasses.py` file.
 
 ```
-$ python3 1-testSoldier.py --v
+$ python3 1-testsSoldier.py --v
 
 testAttackHasNoParams (__main__.TestSoldier) ... ok
 testAttackRetunsStrength (__main__.TestSoldier) ... ok
