@@ -57,6 +57,7 @@ class Saxon(Soldier):
             return f"A Saxon has died in combat"   
 
 # War
+# Sorry, llevo probándolo bastante rato y no me sale :(
 
 
 class War:
@@ -70,8 +71,23 @@ class War:
     def addSaxon(self, Saxon):
         self.saxonArmy.append(Saxon)
 
-    
+    def vikingAttack(self):
+        Saxon.receiveDamage(self, damage = self.strength(Viking))
+        if self.health(Saxon) < 0:
+            self.saxonArmy.pop()
+        return self.receiveDamage(self, damage = self.strength(Viking))
 
+    def saxonAttack(self):
+        Viking.receiveDamage(self, damage = self.strength(Saxon))
+        if self.health(Viking) < 0:
+            self.vikingArmy.pop()
+        return self.receiveDamage(self, damage = self.strength(Saxon)) 
 
-
-    
+    def showStatus(self):
+        if len(self.saxonArmy) == 0:
+            return "Vikings have won the war of the century!"
+        elif len(self.vikingArmy) == 0:
+            return "Saxons have fought for their lives and survive another day..."
+        elif len(self.saxonArmy) > 0 and len(self.vikingArmy) > 0:
+            return "Vikings and Saxons are still in the thick of battle."
+        
