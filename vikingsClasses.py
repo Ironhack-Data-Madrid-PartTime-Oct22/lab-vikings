@@ -84,6 +84,6 @@ class War:
             return f"Saxons have fought for their lives and survive another day..."
         elif len(self.saxonArmy) == 0:
             return f"Vikings have won the war of the century!"
-        elif len(self.saxonArmy)  >0 and len(self.vikingArmy) > 0:
+        elif len(self.saxonArmy) > 0 and len(self.vikingArmy) > 0:
             return f"Vikings and Saxons are still in the thick of battle."
 
