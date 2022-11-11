@@ -6,10 +6,10 @@ class Soldier:
     def __init__(self, health, strength):
 
        self.health = health
-       self.strenght = strength
+       self.strength = strength
 
     def attack(self):
-        return {self.strenght}
+        return self.strength
     
     def receiveDamage(self, damage):
         
@@ -77,4 +77,8 @@ class Saxon(Soldier):
 
 
 class War:
-    pass
+    
+    def __init__(self):
+
+        self
+        pass
