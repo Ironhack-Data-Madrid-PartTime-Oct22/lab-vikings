@@ -47,7 +47,7 @@ $ python3 1-testsSoldier.py --v
 When the tests are all correct you will receive the following message in the terminal.
 
 ```
-$ python3 1-testSoldier.py --v
+$ python3 1-testsSoldier.py --v
 
 testAttackHasNoParams (__main__.TestSoldier) ... ok
 testAttackRetunsStrength (__main__.TestSoldier) ... ok
