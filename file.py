@@ -4,6 +4,7 @@ from vikingsClasses import Soldier, Viking, Saxon, War
 import names ##generador aleatorio de nombres porque no me apetece pensar
 import random
 
+## axiona a tomar --> entiendo que es como cuando haces pd.read_csv()
 war = War()
 
 # creamos el ejercito de vikingos
@@ -24,11 +25,21 @@ while i <= s:
     war.addSaxon(saxon)
     i +=1
 
-## a pegarse
-rounds = 0
-while rounds < 10:
+## a pegarse por rondas
+count = 0
+rounds = int(input("cuantas rondas quieres que dure la guerra: "))
+while count < rounds:
     war.vikingAttack()
     war.saxonAttack()
     check = war.showStatus()
     print(check)
-    rounds +=1
+    count +=1
+
+## a pegarse a muerte
+while len(war.vikingArmy) != 0 or len(war.saxonArmy) != 0:
+    war.vikingAttack()
+    war.saxonAttack()
+    check = war.showStatus()
+    print(check)
+    if len(war.vikingArmy) == 0 or len(war.saxonArmy) == 0:
+        break ##si ganan los sajones, no se rompe, si ganan los vikingos se rompe todo
