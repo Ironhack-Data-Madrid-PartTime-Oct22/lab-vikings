@@ -70,24 +70,33 @@ class War():
     def __init__(self):
 
         self.vikingArmy= []
-        self.saxonArmy=[]
+        self.saxonArmy= []
         
     def addViking(self, Viking):
 
-        self.Viking = Viking
+        
         self.vikingArmy.append(Viking)
 
 
     def addSaxon(self, Saxon):
 
-        self.Saxon = Saxon
         self.saxonArmy.append(Saxon)
 
     def vikingAttack(self):
         import random
 
-        viking = self.vikingArmy[random.randint(0, len(self.vikingArmy)-1)]
-        saxon = self.saxonArmy[random.randint(0, len(self.saxonArmy)-1)]
+        if len(self.vikingArmy) > 1:
+            viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
+            
+        else:
+            viking = self.vikingArmy[0]
+        
+        if len(self.saxonArmy) > 1:
+            saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
+        
+        else:
+            saxon = self.saxonArmy[0]
+
         resultado = saxon.receiveDamage(viking.strength)
 
         if saxon.health < 1:
@@ -98,12 +107,23 @@ class War():
     def saxonAttack(self):
         import random
 
-        viking = self.vikingArmy[random.randint(0, len(self.vikingArmy)-1)]
-        saxon = self.saxonArmy[random.randint(0, len(self.saxonArmy)-1)]
+        if len(self.vikingArmy) > 1:
+            viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
+            
+        else:
+            viking = self.vikingArmy[0]
+        
+        if len(self.saxonArmy) > 1:
+            saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
+        
+        else:
+            saxon = self.saxonArmy[0]
+
         resultado = viking.receiveDamage(saxon.strength)
 
         if viking.health < 1:
             self.vikingArmy.pop(self.vikingArmy.index(viking))
+
         return resultado
 
 
