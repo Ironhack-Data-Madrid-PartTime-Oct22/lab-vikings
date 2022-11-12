@@ -4,8 +4,6 @@ from vikingsClasses import Viking
 from vikingsClasses import Saxon
 
 class Game(War):
-    
-    
 
     def reclutamiento(self):
 
@@ -30,8 +28,6 @@ class Game(War):
                         soldado = Saxon(random.randint(60,100), random.randint(10,20))
                         War.addSaxon(self, soldado)
                         print("Saxon:",soldado.__dict__)
-                    else:
-                        pass
 
             elif equipo == 2:
 
@@ -45,8 +41,6 @@ class Game(War):
                         name = input("Intrdozuzca el nombre del jugador: \n")
                         soldado = Viking(name, random.randint(60,100), random.randint(10,20))
                         War.addViking(self, soldado)
-                    else:
-                        pass
 
         return "Los ejercitos estan listos.\n"
 

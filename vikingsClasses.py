@@ -85,18 +85,9 @@ class War():
     def vikingAttack(self):
         import random
 
-        if len(self.vikingArmy) > 1:
-            viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
-            
-        else:
-            viking = self.vikingArmy[0]
+        viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
+        saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
         
-        if len(self.saxonArmy) > 1:
-            saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
-        
-        else:
-            saxon = self.saxonArmy[0]
-
         resultado = saxon.receiveDamage(viking.strength)
 
         if saxon.health < 1:
@@ -107,18 +98,9 @@ class War():
     def saxonAttack(self):
         import random
 
-        if len(self.vikingArmy) > 1:
-            viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
-            
-        else:
-            viking = self.vikingArmy[0]
+        viking = self.vikingArmy[random.randint(0, (len(self.vikingArmy)-1))]
+        saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
         
-        if len(self.saxonArmy) > 1:
-            saxon = self.saxonArmy[random.randint(0, (len(self.saxonArmy)-1))]
-        
-        else:
-            saxon = self.saxonArmy[0]
-
         resultado = viking.receiveDamage(saxon.strength)
 
         if viking.health < 1:
